@@ -4,8 +4,9 @@ on:
   push:
     branches:
       - main
-    paths:
-      - '.github/workflows/main.yaml'  # optional: allow triggering on workflow update
+    paths-ignore:
+      - '.github/workflows/test.yaml'  # optional: allow triggering on workflow update
+      - '.github/workflows/child.yaml'  # optional: allow triggering on workflow update
 
   workflow_dispatch:  
 
