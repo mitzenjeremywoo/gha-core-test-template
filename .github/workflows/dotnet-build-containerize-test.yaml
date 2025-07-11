@@ -28,7 +28,7 @@ jobs:
   # call reusable workflow but there's another folder call sub here
   
   call-reusable-workflow:
-     needs: build
+     #needs: build
      uses: mitzenjeremywoo/gha-core/.github/workflows/dotnet-build-containerize.yaml@main
      with: 
        environment: "dev"
