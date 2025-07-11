@@ -26,9 +26,3 @@ jobs:
 
       - name: Say hello
         run: echo "👋 Hello from GitHub Actions! ${{ inputs.environment }}"
-
-  call-reusable-workflow:
-     needs: build
-     uses: ./.github/workflows/child.yaml
-     with: 
-       environment: "dev"
