@@ -23,6 +23,6 @@ jobs:
         run: ls -al -R ${{ github.workspace }}
 
       - name: Run reusable workflow locally
-        uses: ${{ github.workspace }}/gha-core/build/dotnet.yaml
+        uses: /gha-core/build/dotnet.yaml
         with:
           environment: "dev"
