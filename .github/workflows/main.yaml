@@ -26,3 +26,5 @@ jobs:
         uses: ./gha-core-test-template/gha-core/build/dotnet.yaml
         with:
           environment: "dev"
+      
+      # ./gha-core-test-template/gha-core/build/dotnet.yaml
