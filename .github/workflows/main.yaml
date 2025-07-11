@@ -22,9 +22,15 @@ jobs:
       - name: Say hello
         run: ls -al -R ${{ github.workspace }}
 
-      - name: Run reusable workflow locally
-        uses: ./gha-core-test-template/gha-core/build/dotnet.yaml
-        with:
-          environment: "dev"
+      # - name: Run reusable workflow locally
+      #   uses: ./gha-core-test-template/gha-core/build/dotnet.yaml
+      #   with:
+      #     environment: "dev"
       
       # ./gha-core-test-template/gha-core/build/dotnet.yaml
+
+  run-reusable:
+    needs: build
+    uses: ./gha-core/build/dotnet.yaml  # Local path from checked-out gha-core repo
+    with:
+      environment: 'dev'
