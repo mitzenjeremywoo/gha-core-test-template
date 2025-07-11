@@ -20,9 +20,9 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}  # or PAT if private
 
       - name: Say hello
-        run: ls -al ${{ github.workspace }}
+        run: ls -al -R ${{ github.workspace }}
 
       - name: Run reusable workflow locally
         uses: ./gha-core/build/dotnet.yaml
         with:
-          input1: "value"
+          environment: "dev"
