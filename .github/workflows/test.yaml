@@ -1,0 +1,28 @@
+name: dotnet-build
+
+on:
+  push:  # on push 
+    branches:
+      - main
+      - release
+  pull_request: # on pull request
+    branches:
+
+  workflow_dispatch:  # able to 
+
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Say hello
+        run: echo "👋 Hello from GitHub Actions! ${{ inputs.environment }}"
