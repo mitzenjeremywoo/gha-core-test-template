@@ -12,12 +12,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout gha core
         uses: actions/checkout@v4
         with:
           repository: mitzenjeremywoo/gha-core
           path: gha-core
           token: ${{ secrets.GITHUB_TOKEN }}  # or PAT if private
+
+      - name: Say hello
+        run: ls -al ${{ github.workspace }}
 
       - name: Run reusable workflow locally
         uses: ./gha-core/build/dotnet.yaml
