@@ -35,5 +35,8 @@ jobs:
   call-reusable-workflow:
      needs: build
      uses: ./.github/workflows/test.yaml
+     with: 
+       environment: "dev"
+        
 
   
