@@ -33,7 +33,7 @@ jobs:
   
   call-reusable-workflow:
      needs: build
-     uses: ./test.yaml
+     uses: ./test.yaml@main
      with: 
        environment: "dev"
         
