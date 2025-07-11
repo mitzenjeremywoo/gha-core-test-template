@@ -28,8 +28,7 @@ jobs:
       # - name: Run reusable workflow locally
       #   uses: ./test.yaml
       #   with:
-      #     environment: "dev"
-      
+      #     environment: "dev"      
       # ./gha-core-test-template/gha-core/build/dotnet.yaml
   
   call-reusable-workflow:
