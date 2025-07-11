@@ -30,8 +30,8 @@ jobs:
   call-reusable-workflow:
      #needs: build
      uses: mitzenjeremywoo/gha-core/.github/workflows/dotnet-build-containerize.yaml@main
-     with: 
-       environment: "dev"
+    #  with: 
+    #    environment: "dev"
 
   # call-reusable-workflow:
   #    needs: build
