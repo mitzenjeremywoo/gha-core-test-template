@@ -1,4 +1,4 @@
-name: Hello World Workflow
+name: dotnet-build-containerize-test-pipeline
 
 permissions:
     contents: read
