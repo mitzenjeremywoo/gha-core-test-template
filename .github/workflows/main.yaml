@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Checkout self repo
         uses: actions/checkout@v4
-        
+
       - name: Checkout gha core
         uses: actions/checkout@v4
         with:
@@ -26,7 +26,7 @@ jobs:
         run: ls -al -R ${{ github.workspace }}
 
       - name: Run reusable workflow locally
-        uses: ./.github/workflows/test.yaml
+        uses: ./test.yaml
         with:
           environment: "dev"
       
