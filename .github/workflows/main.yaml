@@ -12,6 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout self repo
+        uses: actions/checkout@v4
+        
       - name: Checkout gha core
         uses: actions/checkout@v4
         with:
