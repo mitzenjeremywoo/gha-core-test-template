@@ -12,12 +12,12 @@ on:
   workflow_dispatch:  
 
 jobs:
-  # build:
-  #   runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
-  #   steps:
-  #     - name: Checkout self repo
-  #       uses: actions/checkout@v4
+    steps:
+      - name: Checkout self repo
+        uses: actions/checkout@v4
 
   #     - name: Checkout gha core
   #       uses: actions/checkout@v4
@@ -32,7 +32,7 @@ jobs:
   # call reusable workflow but there's another folder call sub here
   
   call-reusable-workflow:
-     #needs: build
+     needs: build
      uses: mitzenjeremywoo/gha-core/.github/workflows/dotnet-build-containerize.yaml@main
     #  with: 
     #    environment: "dev"
