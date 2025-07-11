@@ -1,13 +1,6 @@
 name: dotnet-build
 
 on:
-  push:  # on push 
-    branches:
-      - main
-      - release
-  pull_request: # on pull request
-    branches:
-
   workflow_dispatch:  # able to 
 
   workflow_call:
