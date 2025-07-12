@@ -12,41 +12,8 @@ on:
   workflow_dispatch:  
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout self repo
-        uses: actions/checkout@v4
-
-  #     - name: Checkout gha core
-  #       uses: actions/checkout@v4
-  #       with:
-  #         repository: mitzenjeremywoo/gha-core
-  #         path: gha-core
-  #         token: ${{ secrets.GITHUB_TOKEN }}  # or PAT if private
-
-  #     - name: Say hello
-  #       run: ls -al -R ${{ github.workspace }}
-
-  # call reusable workflow but there's another folder call sub here
-  
+   
   call-reusable-workflow:
-     needs: build
      uses: mitzenjeremywoo/gha-core/.github/workflows/dotnet-build-containerize.yaml@main
     #  with: 
     #    environment: "dev"
-
-  # call-reusable-workflow:
-  #    needs: build
-  #    uses: ./.github/workflows/test.yaml
-  #    with: 
-  #      environment: "dev"
-        
-  # call-reusable-workflow-external:
-  #    needs: build
-  #    uses: ./gha-core/.github/workflows/dotnet.yaml
-  #    with: 
-  #      environment: "dev"
-        
-  
